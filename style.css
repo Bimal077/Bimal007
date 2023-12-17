@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(208, 193, 193);
+    padding: 5px 20px;
+    margin: 0; 
+    height: 10vh;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    width:50px;
+    
+}
+.div1 img{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.div2{
+    display: flex;
+}
+.div2 ul li{
+    float:left;
+    list-style: none;
+    display:flex;
+justify-content:center;
+align-items: center;}
+    
+.div2 ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 50;
+    
+    padding: 5px;
+    margin-left: 25px;
+}
+.active{
+    color:green;
+    transition:.5s;
+
+}
+.active:hover{
+    color:black;
+}
+.active::after{
+    content:"";
+    display:block;
+    position:relative;
+    top:2px;
+    height:5px;
+    width:100%;
+    background:green;
+    transition:.8s;
+
+
+}
+.active:hover::after{
+    width:30%;
+
+}
+.inactive::after{
+    content:"";
+    display:block;
+    position:relative;
+    top:2px;
+    height:5px;
+    width:0%;
+    background:green;
+    transition:.8s;
+
+}
+.inactive:hover::after{
+    width:100%;
+}
+
+.birds{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(172, 133, 193);
+}
+#content{
+    width: 50%;
+    padding: 20px 50px;
+}
+#content h1{
+    margin: 10px;
+    padding: 2px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+#btn{
+    display: flex;
+    justify-content: center;
+}
+#btn button {
+    font-size: 16px;
+    padding: 10px 16px;
+    margin-top:20px;
+    border: 2px solid blue;
+    background-color: brown;
+    color: white;
+    border-radius: 25px;
+    transition:5s;}
+#content button {
+    font-size: 16px;
+    padding: 10px 16px;
+    margin-top:20px;
+    
+    border: 2px solid blue;
+    background-color: brown;
+    color: white;
+    border-radius: 25px;
+    transition: .5s;
+}
+#content button:hover{
+    color: brown;
+    background-color: white;
+}
+#content h1 span{
+    color: green;
+}
+#content p{
+    padding: 5px;
+    font-size: 18px;
+}
+#image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image img{
+    height : auto;
+    width: 100%;
+    
+}
+
+@media (max-width:900px){
+    .birds{
+     flex-wrap: wrap;
+    }
+    #content,#image{
+        width:90%;
+        margin-bottom: 10px;
+    }
+    .birds{
+        height: 100%;
+    }
+    @media (max-width:550px){
+        .div1 img{
+            height:60px;
+            width:50 px;
+            top:30 px;
+            left:15px;
+        }
+        .div2 ul li a{
+            font-size : 15px;
+            font-weight: 450;
+            color: black ;
+            padding:5px;
+            margin-left :10px;
+        }
+        #content {
+            padding:20px 10px;
+        }
+        }
+        }
+        @media (max-width:300px){
+            .navBar{
+                height: 5vh;
+            }
+            .div1 img{
+                height:45px;
+                width:45px;
+                top: 25px;
+                left: 25px;
+            }
+            .div2 ul li a{
+                font-size: 13px;
+                font-weight: 450;
+                color: black;
+                margin-left: 2px;
+            }
+        
+        }
+    
+
